@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Delivery App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css" rel="stylesheet" />
+    <!-- Geocoder plugin -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" />
+    <link rel="stylesheet" href="css/mymap.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div id="map" class="contain">
+            <div class="sidebar" id="drop-list" style="display: none">
+                <div class="heading">
+                    <span>Shipping list</span>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-navicon toggle" aria-hidden="true" data-toggle="#listings"></i>
+                    </a>
+                    <div class="mapbox-directions-profile mapbox-directions-component-keyline mapbox-directions-clearfix" id="mapbox-profile">
+                        <input id="mapbox-directions-profile-driving-traffic" type="radio" name="profile" value="driving-traffic" checked>
+                        <label for="mapbox-directions-profile-driving-traffic">Traffic</label>
+                        <input id="mapbox-directions-profile-driving" type="radio" name="profile" value="driving">
+                        <label for="mapbox-directions-profile-driving">Driving</label>
+                        <input id="mapbox-directions-profile-walking" type="radio" name="profile" value="walking">
+                        <label for="mapbox-directions-profile-walking">Walking</label>
+                        <input id="mapbox-directions-profile-cycling" type="radio" name="profile" value="cycling">
+                        <label for="mapbox-directions-profile-cycling">Cycling</label>
+                    </div>
+                    <p id="result"></p>
+                </div>
+                <div id="listings" class="listings">
+                    <div class="done-btn d-flex justify-content-center mt-2">
+                        <button class="btn btn-primary" id="save-history">Find route</button>
+                        <button class="btn btn-secondary" id="reset-route" style="display: none">Find another route</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+    <script src="js/mymap.js"></script>
+</body>
+
+</html>

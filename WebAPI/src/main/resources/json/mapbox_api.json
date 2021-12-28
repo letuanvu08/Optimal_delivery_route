@@ -1,0 +1,48 @@
+{
+    "code": "Ok",
+    "waypoints": [{
+            "distance": 19.36634593779548,
+            "name": "Hùng Vương",
+            "location": [108.046405, 12.679875],
+            "waypoint_index": 0,
+            "trips_index": 0
+        },
+        {
+            "distance": 150.57644626554378,
+            "name": "Quốc lộ 14",
+            "location": [108.200803, 12.776629],
+            "waypoint_index": 1,
+            "trips_index": 0
+        },
+        {
+            "distance": 18.813275927346435,
+            "name": "",
+            "location": [108.197381, 12.764383],
+            "waypoint_index": 2,
+            "trips_index": 0
+        },
+        {
+            "distance": 90.15458344878995,
+            "name": "",
+            "location": [108.210646, 12.709747],
+            "waypoint_index": 3,
+            "trips_index": 0
+        }
+    ],
+    "trips": [{
+        "geometry": {
+            "coordinates": [
+                [108.046405, 12.679875],
+                [108.046018, 12.679886],
+                [108.209009, 12.708968],
+                [108.209817, 12.709374],
+                [108.210646, 12.709747]
+            ],
+            "type": "LineString"
+        },
+        "weight_name": "routability",
+        "weight": 3453.2000000000003,
+        "duration": 3240.8999999999996,
+        "distance": 31622.600000000002
+    }]
+}

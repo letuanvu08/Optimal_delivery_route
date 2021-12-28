@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+.grad1 .container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grad1 {
+    background-color: red;
+    background-image: linear-gradient(to right, #a3f147, #88f67f);
+}
+
+.left {
+    text-align: left;
+}
